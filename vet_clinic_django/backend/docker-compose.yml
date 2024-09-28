@@ -1,0 +1,16 @@
+services:
+  app-db:
+    image: postgres:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    networks:
+      - app_db_network
+
+
+networks:
+  app_db_network:
+    driver: bridge
