@@ -1,4 +1,13 @@
 from .users import (
     UserRegistrationView,
-    MyInfoApi
+    UserInfoApi
 )
+from .info import (
+    SpecialistListView,
+    ServiceListView,
+)
+from .pets import (
+    PetInfoApi,
+    MedicalHistoryApi
+)
+

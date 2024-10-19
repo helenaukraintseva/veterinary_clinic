@@ -28,7 +28,7 @@ class UserRegistrationView(CreateAPIView):
         return Response(context, status=status.HTTP_201_CREATED)
 
 
-class MyInfoApi(APIView):
+class UserInfoApi(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):

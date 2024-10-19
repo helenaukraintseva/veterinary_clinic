@@ -28,7 +28,7 @@ class Pet(models.Model):
     age = models.PositiveIntegerField()
     photo = models.ImageField(max_length=255, upload_to='photos-of-pets/', blank=True, null=True)
     breed = models.ForeignKey(Breed, on_delete=models.SET_NULL, related_name='pet_breed', blank=True, null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='pet_user')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='pet_user')
 
     class Meta:
         verbose_name = 'Питомец'

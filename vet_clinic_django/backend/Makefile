@@ -20,4 +20,4 @@ migrate:
 
 # Создание администратора
 create-admin:
-	python app/manage.py migrate
+	python app/manage.py createsuperuser
